@@ -1,0 +1,22 @@
+{{ define "main" }}
+<div class="header-card">
+  <h1>{{ .Site.Data.meta.name }}</h1>
+  <p class="header-location">{{ .Site.Data.meta.location }}</p>
+  <div class="contact-links">
+    <a href="mailto:{{ .Site.Data.meta.email }}" class="contact-btn">{{ .Site.Data.meta.email }}</a>
+    <a href="{{ .Site.Data.meta.linkedin_url }}" target="_blank" class="contact-btn">LinkedIn</a>
+    <a href="{{ .Site.Data.meta.github_url }}" target="_blank" class="contact-btn">GitHub</a>
+  </div>
+</div>
+
+<div class="home-nav">
+  <a href="/cv/" class="nav-card">
+    <h2>CV</h2>
+    <p>Work experience and qualifications</p>
+  </a>
+  <a href="/blog/" class="nav-card">
+    <h2>Blog</h2>
+    <p>Thoughts and writings</p>
+  </a>
+</div>
+{{ end }}

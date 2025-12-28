@@ -1,0 +1,38 @@
+baseURL = 'https://scott.ames.sh/'
+languageCode = 'en-us'
+title = 'Scott Ames'
+
+[taxonomies]
+tag = "tags"
+category = "categories"
+
+[permalinks]
+[permalinks.term]
+tags = "/blog/tags/:slug/"
+categories = "/blog/categories/:slug/"
+[permalinks.taxonomy]
+tags = "/blog/tags/"
+categories = "/blog/categories/"
+
+[params]
+description = "DevOps Engineer"
+author = "Scott Ames"
+
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.highlight]
+style = "github-dark"
+lineNos = false
+codeFences = true
+guessSyntax = true
+
+[outputs]
+home = ["HTML", "sitemap"]
+section = ["HTML", "RSS"]
+
+[sitemap]
+changefreq = "weekly"
+priority = 0.5

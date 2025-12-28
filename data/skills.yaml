@@ -1,0 +1,44 @@
+columns:
+  - categories:
+      - name: Cloud Architecture & Security
+        items:
+          - AWS, Google Cloud, Azure
+          - Serverless (Lambda) event driven architecture
+      - name: Container Orchestration
+        items:
+          - Kubernetes, Nomad, ECS, Docker
+      - name: Virtualization
+        items:
+          - VMWare, KVM, Docker, LXC
+      - name: Automation & Configuration
+        items:
+          - Terraform, Vagrant, Packer
+          - Golang, Bash, Ruby, Python, PowerShell
+          - Puppet, Ansible, Chef
+      - name: Monitoring
+        items:
+          - Datadog, Splunk, Cloudwatch, ELK, Prometheus, Nagios
+      - name: High Availability
+        items:
+          - Disaster recovery planning and implementation
+  - categories:
+      - name: Leadership
+        items:
+          - 5+ years leading DevOps teams
+          - Architecture, planning & execution
+          - Training & mentoring
+      - name: Server Administration
+        items:
+          - "Linux: Ubuntu, Container Linux (CoreOS), RHEL"
+          - Windows Server, Azure Cloud
+      - name: Database Management
+        items:
+          - Cloud native (DynamoDB, RDS, Spanner)
+          - MySQL, PostgreSQL, MongoDB
+          - Vault, Consul, Etcd
+      - name: Networking & Security
+        items:
+          - VPC, Meraki, HP, Fortinet, Dell, Nessus
+      - name: Hardware
+        items:
+          - Systems maintenance and installation

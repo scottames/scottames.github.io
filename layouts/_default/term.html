@@ -1,0 +1,16 @@
+{{ define "main" }}
+<div class="header-card">
+  <h1>{{ .Title }}</h1>
+  <p class="term-count">{{ len .Pages }} {{ if eq (len .Pages) 1 }}post{{ else }}posts{{ end }}</p>
+</div>
+
+{{ range .Pages }}
+<a href="{{ .Permalink }}" class="blog-card">
+  <article>
+    <h2>{{ .Title }}</h2>
+    <p class="dates">{{ .Date.Format "January 2, 2006" }}</p>
+    {{ with .Description }}<p class="blog-summary">{{ . }}</p>{{ end }}
+  </article>
+</a>
+{{ end }}
+{{ end }}

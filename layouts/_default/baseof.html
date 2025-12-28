@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+  {{- partial "head.html" . -}}
+</head>
+<body>
+  {{- partial "header.html" . -}}
+  <main class="container">
+    {{- block "main" . }}{{- end }}
+  </main>
+  {{- partial "footer.html" . -}}
+  <script>
+    (function() {
+      // Theme toggle
+      var toggle = document.querySelector('.theme-toggle');
+      if (toggle) {
+        toggle.addEventListener('click', function() {
+          var current = document.documentElement.getAttribute('data-theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var newTheme;
+
+          if (current === 'dark') {
+            newTheme = 'light';
+          } else if (current === 'light') {
+            newTheme = 'dark';
+          } else {
+            newTheme = prefersDark ? 'light' : 'dark';
+          }
+
+          document.documentElement.setAttribute('data-theme', newTheme);
+          localStorage.setItem('theme', newTheme);
+        });
+      }
+
+      // Search modal
+      var searchToggle = document.getElementById('search-toggle');
+      var searchModal = document.getElementById('search-modal');
+      var searchBackdrop = document.getElementById('search-backdrop');
+      var searchClose = document.getElementById('search-close');
+
+      function openSearch() {
+        searchModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        var input = searchModal.querySelector('input');
+        if (input) input.focus();
+      }
+
+      function closeSearch() {
+        searchModal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      if (searchToggle) {
+        searchToggle.addEventListener('click', openSearch);
+      }
+      if (searchBackdrop) {
+        searchBackdrop.addEventListener('click', closeSearch);
+      }
+      if (searchClose) {
+        searchClose.addEventListener('click', closeSearch);
+      }
+
+      // Close on Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && searchModal.classList.contains('active')) {
+          closeSearch();
+        }
+        // Open on Cmd/Ctrl + K
+        if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+          e.preventDefault();
+          if (searchModal.classList.contains('active')) {
+            closeSearch();
+          } else {
+            openSearch();
+          }
+        }
+      });
+    })();
+  </script>
+  <!-- Pagefind -->
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  <script src="/pagefind/pagefind-ui.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      new PagefindUI({
+        element: '#search-container',
+        showSubResults: true,
+        showImages: false
+      });
+    });
+  </script>
+</body>
+</html>

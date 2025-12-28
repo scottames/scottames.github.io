@@ -1,0 +1,13 @@
+items:
+  - title: Technical Coursework
+    institution: null
+    dates: null
+    description: Golang, AWS, Cloud Architecture, RHEL, Ubuntu Linux
+  - title: General Coursework
+    institution: Community College of Denver
+    dates: 2006 - 2008
+    description: null
+  - title: School of Engineering
+    institution: University of Colorado at Denver
+    dates: 2005 - 2006
+    description: null

@@ -1,0 +1,117 @@
+{{ define "main" }}
+<div class="header-card">
+  <h1>{{ .Site.Data.meta.name }}</h1>
+  <p class="header-location">{{ .Site.Data.meta.location }}</p>
+  <div class="contact-links">
+    <a href="mailto:{{ .Site.Data.meta.email }}" class="contact-btn">{{ .Site.Data.meta.email }}</a>
+    <a href="{{ .Site.Data.meta.linkedin_url }}" target="_blank" class="contact-btn">LinkedIn</a>
+    <a href="{{ .Site.Data.meta.github_url }}" target="_blank" class="contact-btn">GitHub</a>
+  </div>
+</div>
+
+<!-- Summary -->
+<div class="section">
+  <h2 class="section-title">Summary</h2>
+  <div class="section-content">
+    {{ .Content }}
+  </div>
+</div>
+
+<!-- Skills -->
+<div class="section">
+  <h2 class="section-title">Qualifications | Skills</h2>
+  <div class="section-content">
+    <div class="skills-grid">
+      {{ range .Site.Data.skills.columns }}
+      <div class="skills-column">
+        {{ range .categories }}
+        <div class="skill-category">
+          <h4>{{ .name }}</h4>
+          <ul>
+            {{ range .items }}
+            <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>
+
+<!-- Experience -->
+<div class="section">
+  <h2 class="section-title">Work Experience</h2>
+  <div class="section-content">
+    {{ range sort (.GetPage "cv/experience").Pages "Params.weight" "desc" }}
+    <div class="experience-item">
+      <div class="experience-header">
+        <div class="experience-header-main">
+          <h3 class="company-name">
+            {{ if .Params.company_url }}
+            <a href="{{ .Params.company_url }}" target="_blank">{{ .Params.company }}</a>
+            {{ else }}
+            {{ .Params.company }}
+            {{ end }}
+            <span class="job-title">· {{ .Params.title }}</span>
+          </h3>
+          <span class="location">{{ .Params.location }}</span>
+        </div>
+        <span class="dates">{{ .Params.dates }}</span>
+      </div>
+      {{ with .Params.note }}<div class="company-note">{{ . }}</div>{{ end }}
+      <div class="experience-content">
+        {{ .Content }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</div>
+
+<!-- Education -->
+<div class="section">
+  <h2 class="section-title">Education | Training</h2>
+  <div class="section-content">
+    {{ range .Site.Data.education.items }}
+    <div class="experience-item">
+      <div class="experience-header">
+        <h3>{{ .title }}</h3>
+        {{ with .dates }}<span class="dates">{{ . }}</span>{{ end }}
+      </div>
+      {{ with .institution }}<span class="job-title">{{ . }}</span>{{ end }}
+      {{ with .description }}<p>{{ . }}</p>{{ end }}
+    </div>
+    {{ end }}
+  </div>
+</div>
+
+<!-- Interests -->
+<div class="section">
+  <h2 class="section-title">Charitable Work | Interests</h2>
+  <div class="section-content">
+    {{ range .Site.Data.interests.items }}
+    <div class="experience-item">
+      <div class="experience-header">
+        <h3>{{ .title }} <small>({{ .location }})</small></h3>
+        <span class="dates">{{ .dates }}</span>
+      </div>
+      <span class="job-title">{{ .description }}</span>
+      <ul>
+        {{ range .details }}
+        <li>{{ . }}</li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+  </div>
+</div>
+
+<!-- References -->
+<div class="section">
+  <h2 class="section-title">References</h2>
+  <div class="section-content">
+    <p>References available upon request.</p>
+  </div>
+</div>
+{{ end }}

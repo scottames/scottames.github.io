@@ -1,0 +1,45 @@
+{{ define "main" }}
+<article>
+  <div class="header-card">
+    <h1>{{ .Title }}</h1>
+    <p class="dates">{{ .Date.Format "January 2, 2006" }} · {{ .ReadingTime }} min read</p>
+  </div>
+
+  <div class="section">
+    <div class="blog-content">
+      {{- if .TableOfContents }}
+      <details class="toc">
+        <summary>Table of Contents</summary>
+        {{ .TableOfContents }}
+      </details>
+      {{- end }}
+      {{ .Content }}
+    </div>
+  </div>
+
+  {{- if or .Params.categories .Params.tags }}
+  <div class="post-taxonomy">
+    {{- with .Params.categories }}
+    <div class="post-taxonomy-group">
+      <span class="post-taxonomy-label">Categories</span>
+      <div class="post-taxonomy-items">
+        {{- range . }}
+        <a href="/blog/categories/{{ . | urlize }}/" class="tag-item">{{ . }}</a>
+        {{- end }}
+      </div>
+    </div>
+    {{- end }}
+    {{- with .Params.tags }}
+    <div class="post-taxonomy-group">
+      <span class="post-taxonomy-label">Tags</span>
+      <div class="post-taxonomy-items">
+        {{- range . }}
+        <a href="/blog/tags/{{ . | urlize }}/" class="tag-item">{{ . }}</a>
+        {{- end }}
+      </div>
+    </div>
+    {{- end }}
+  </div>
+  {{- end }}
+</article>
+{{ end }}

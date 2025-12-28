@@ -1,0 +1,9 @@
+# Default recipe - list available commands
+[private]
+default:
+    @just --list
+
+# Create new blog post (usage: just new "my-post-title")
+[working-directory: '../..']
+new title:
+    hugo new blog/{{title}}.md
