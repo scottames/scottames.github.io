@@ -40,8 +40,8 @@ hugo new blog/my-post.md
 
 ### Work Experience
 
-Create `content/cv/experience/NN-company.md` with frontmatter:
-`company`, `company_url`, `title`, `location`, `dates`, `weight`
+Create `content/cv/experience/NN-company.md` with frontmatter: `company`,
+`company_url`, `title`, `location`, `dates`, `weight`
 
 ## Deployment
 
@@ -52,3 +52,9 @@ Push to `main` → GitHub Actions builds and deploys to GitHub Pages.
 - `docs/CONTENT-GUIDE.md` - Detailed content editing guide
 - `docs/SESSION-2025-12-24.md` - Initial build session notes
 - `docs/plans/` - Design and implementation plans
+
+## History
+
+This site used to be a simple static html site that included
+[scottames/cv](https://github.com/scottames/cv) as a git submodule (`cv`). It
+has been combined into one Hugo site as outlined above.
