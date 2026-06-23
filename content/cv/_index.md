@@ -4,9 +4,9 @@ description: Curriculum Vitae for J. Scott Ames
 layout: cv
 ---
 
-Highly competent and organized DevOps engineer with experience designing,
-implementing and maintaining automated, highly available and secure systems
-infrastructures and data-center operations across public cloud & on-prem.
-Precise, articulate and adept in interdepartmental and client communications.
-Committed to continuous skill development. Eager to take on new challenges and
-deliver high quality results, particularly in a collaborative setting.
+Senior DevSecOps and platform engineer with 15+ years building secure, automated
+infrastructure for startups and enterprise SaaS. Often the first or founding
+infrastructure hire, owning cloud architecture, CI/CD, compliance, and
+increasingly product engineering from the ground up. Most effective in
+early-stage environments, turning vague security and infrastructure needs into
+systems a small team can run.

@@ -7,6 +7,8 @@ dates: 2021 - 2021
 weight: 2021
 ---
 
-Bitnomial was founded in 2014 to create a marketplace connecting native digital
-asset hedgers with institutional traders. Bitnomial offers improved derivatives
-exchange technology coupled with new digital asset settlement systems.
+DevOps engineer supporting infrastructure and delivery systems for a regulated
+digital asset derivatives exchange.
+
+- Applied infrastructure-as-code and CI/CD practices to the exchange's cloud
+  infrastructure under strict security and compliance requirements.
