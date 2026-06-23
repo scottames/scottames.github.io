@@ -86,32 +86,4 @@
   </div>
 </div>
 
-<!-- Interests -->
-<div class="section">
-  <h2 class="section-title">Charitable Work | Interests</h2>
-  <div class="section-content">
-    {{ range .Site.Data.interests.items }}
-    <div class="experience-item">
-      <div class="experience-header">
-        <h3>{{ .title }} <small>({{ .location }})</small></h3>
-        <span class="dates">{{ .dates }}</span>
-      </div>
-      <span class="job-title">{{ .description }}</span>
-      <ul>
-        {{ range .details }}
-        <li>{{ . }}</li>
-        {{ end }}
-      </ul>
-    </div>
-    {{ end }}
-  </div>
-</div>
-
-<!-- References -->
-<div class="section">
-  <h2 class="section-title">References</h2>
-  <div class="section-content">
-    <p>References available upon request.</p>
-  </div>
-</div>
 {{ end }}

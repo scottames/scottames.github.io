@@ -1,44 +1,41 @@
 columns:
   - categories:
-      - name: Cloud Architecture & Security
+      - name: Platform & Cloud
         items:
           - AWS, Google Cloud, Azure
-          - Serverless (Lambda) event driven architecture
-      - name: Container Orchestration
+          - Multi-tenant & single-tenant SaaS, BYOC / BYOVPC
+          - Event-driven, serverless
+      - name: Kubernetes & Runtime Isolation
         items:
-          - Kubernetes, Nomad, ECS, Docker
-      - name: Virtualization
+          - Kubernetes, ECS, Docker
+          - Cilium, Karpenter, autoscaling, hardened networking
+          - Kata, Cloud Hypervisor, Firecracker, gVisor
+      - name: Infrastructure as Code
         items:
-          - VMWare, KVM, Docker, LXC
-      - name: Automation & Configuration
+          - Terraform, Packer, Ansible, Puppet
+          - GitOps, declarative infrastructure
+          - High availability, disaster recovery
+      - name: CI/CD & Developer Productivity
         items:
-          - Terraform, Vagrant, Packer
-          - Golang, Bash, Ruby, Python, PowerShell
-          - Puppet, Ansible, Chef
-      - name: Monitoring
-        items:
-          - Datadog, Splunk, Cloudwatch, ELK, Prometheus, Nagios
-      - name: High Availability
-        items:
-          - Disaster recovery planning and implementation
+          - GitHub Actions, CircleCI, Dagger, Renovate
+          - Monorepo & open-source release workflows
   - categories:
-      - name: Leadership
+      - name: DevSecOps & Compliance
         items:
-          - 5+ years leading DevOps teams
-          - Architecture, planning & execution
-          - Training & mentoring
-      - name: Server Administration
+          - SOC 2 Type 2 readiness & renewal
+          - IAM, SSO, identity & access
+          - Vault, Consul, etcd
+      - name: Languages & Product Engineering
         items:
-          - "Linux: Ubuntu, Container Linux (CoreOS), RHEL"
-          - Windows Server, Azure Cloud
-      - name: Database Management
+          - Golang, Python, Rust, Bash, Ruby, PowerShell
+          - Backend services, CLIs, TUIs
+          - Tauri, product auth, developer tooling
+      - name: Data & Observability
         items:
-          - Cloud native (DynamoDB, RDS, Spanner)
+          - DynamoDB, RDS, Spanner, Snowflake
           - MySQL, PostgreSQL, MongoDB
-          - Vault, Consul, Etcd
-      - name: Networking & Security
+          - Datadog, Splunk, CloudWatch, Prometheus, ELK
+      - name: Leadership & Advisory
         items:
-          - VPC, Meraki, HP, Fortinet, Dell, Nessus
-      - name: Hardware
-        items:
-          - Systems maintenance and installation
+          - Building & leading DevOps / DevSecOps teams
+          - Startup DevSecOps advising & consulting

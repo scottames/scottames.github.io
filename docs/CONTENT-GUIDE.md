@@ -111,21 +111,6 @@ linkedin_url: https://www.linkedin.com/in/username
 location: City, State
 ```
 
-### Charitable Work / Interests
-
-Edit `data/interests.yaml`:
-
-```yaml
-items:
-  - title: Organization
-    location: City, Country
-    dates: 2020 - 2024
-    description: Short description
-    details:
-      - Bullet point 1
-      - Bullet point 2
-```
-
 ## Styling
 
 CSS lives in `assets/css/main.css`. Key CSS variables:
