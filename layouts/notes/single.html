@@ -6,7 +6,7 @@
   </div>
 
   <div class="section">
-    <div class="blog-content">
+    <div class="note-content">
       {{- if .TableOfContents }}
       <details class="toc">
         <summary>Table of Contents</summary>
@@ -24,7 +24,7 @@
       <span class="post-taxonomy-label">Categories</span>
       <div class="post-taxonomy-items">
         {{- range . }}
-        <a href="/blog/categories/{{ . | urlize }}/" class="tag-item">{{ . }}</a>
+        <a href="/notes/categories/{{ . | urlize }}/" class="tag-item">{{ . }}</a>
         {{- end }}
       </div>
     </div>
@@ -34,7 +34,7 @@
       <span class="post-taxonomy-label">Tags</span>
       <div class="post-taxonomy-items">
         {{- range . }}
-        <a href="/blog/tags/{{ . | urlize }}/" class="tag-item">{{ . }}</a>
+        <a href="/notes/tags/{{ . | urlize }}/" class="tag-item">{{ . }}</a>
         {{- end }}
       </div>
     </div>

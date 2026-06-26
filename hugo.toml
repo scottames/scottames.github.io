@@ -8,11 +8,11 @@ category = "categories"
 
 [permalinks]
 [permalinks.term]
-tags = "/blog/tags/:slug/"
-categories = "/blog/categories/:slug/"
+tags = "/notes/tags/:slug/"
+categories = "/notes/categories/:slug/"
 [permalinks.taxonomy]
-tags = "/blog/tags/"
-categories = "/blog/categories/"
+tags = "/notes/tags/"
+categories = "/notes/categories/"
 
 [params]
 description = "DevOps Engineer"

@@ -3,7 +3,7 @@
 default:
     @just --list
 
-# Create new blog post (usage: just new "my-post-title")
+# Create new note (usage: just new "my-note-title")
 [working-directory: '../..']
 new title:
-    hugo new blog/{{title}}.md
+    hugo new notes/{{title}}.md

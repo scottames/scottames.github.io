@@ -1,4 +1,4 @@
-mod blog 'content/blog/justfile'
+mod notes 'content/notes/justfile'
 
 # Default recipe - list available commands
 [private]

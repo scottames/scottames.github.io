@@ -12,15 +12,15 @@
 </div>
 {{ else }}
 {{ range $pages }}
-<a href="{{ .Permalink }}" class="blog-card">
+<a href="{{ .Permalink }}" class="note-card">
   <article>
     <h2>{{ .Title }}</h2>
     <p class="dates">{{ .Date.Format "January 2, 2006" }} · {{ .ReadingTime }} min read</p>
-    {{ with .Description }}<p class="blog-summary">{{ . }}</p>{{ end }}
+    {{ with .Description }}<p class="note-summary">{{ . }}</p>{{ end }}
     {{- if or .Params.categories .Params.tags }}
-    <div class="blog-card-tags">
-      {{- range .Params.categories }}<span class="blog-card-tag blog-card-category">{{ . }}</span>{{- end }}
-      {{- range .Params.tags }}<span class="blog-card-tag">{{ . }}</span>{{- end }}
+    <div class="note-card-tags">
+      {{- range .Params.categories }}<span class="note-card-tag note-card-category">{{ . }}</span>{{- end }}
+      {{- range .Params.tags }}<span class="note-card-tag">{{ . }}</span>{{- end }}
     </div>
     {{- end }}
   </article>
@@ -29,6 +29,6 @@
 {{ end }}
 
 <div class="rss-link">
-  <a href="/blog/index.xml">RSS</a>
+  <a href="/notes/index.xml">RSS</a>
 </div>
 {{ end }}

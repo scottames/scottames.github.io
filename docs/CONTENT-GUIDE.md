@@ -11,8 +11,8 @@ hugo server
 # Build for production
 hugo --minify
 
-# Create new blog post
-hugo new blog/my-post-title.md
+# Create new note
+hugo new notes/my-note-title.md
 ```
 
 ## Site Structure
@@ -21,13 +21,13 @@ hugo new blog/my-post-title.md
 |-----|--------|-------------|
 | `/` | `content/_index.md` + `layouts/index.html` | Homepage |
 | `/cv/` | `content/cv/_index.md` + data files | CV page |
-| `/blog/` | `content/blog/*.md` | Blog posts |
+| `/notes/` | `content/notes/*.md` | Notes |
 
 ## Adding Content
 
-### New Blog Post
+### New Note
 
-Create `content/blog/YYYY-MM-DD-post-title.md`:
+Create `content/notes/YYYY-MM-DD-note-title.md`:
 
 ```markdown
 ---
@@ -132,7 +132,7 @@ Push to `main` branch → GitHub Actions builds and deploys automatically.
 
 ```bash
 git add .
-git commit -m "feat: add new blog post"
+git commit -m "feat: add new note"
 git push
 ```
 
