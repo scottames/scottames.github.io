@@ -6,9 +6,9 @@ categories: ["Meta"]
 tags: ["hugo", "web"]
 ---
 
-Welcome to my blog! This is a sample post to demonstrate the blog functionality.
+Welcome to my notes! This is a sample post to demonstrate the notes functionality.
 
-## Why a Blog?
+## Why Notes?
 
 After years of working in DevOps and platform engineering, I've accumulated thoughts on tooling, infrastructure patterns, and the ever-evolving cloud ecosystem. This space is for sharing those learnings.
 

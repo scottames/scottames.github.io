@@ -4,9 +4,9 @@
       <a href="/" class="site-title">{{ .Site.Title }}</a>
       {{- if or (eq .Kind "taxonomy") (eq .Kind "term") }}
       <span class="breadcrumb-sep">//</span>
-      <a href="/blog/" class="site-section">Blog</a>
+      <a href="/notes/" class="site-section">Notes</a>
       <span class="breadcrumb-sep">//</span>
-      <a href="/blog/{{ .Data.Plural }}/" class="site-section">{{ .Data.Plural | title }}</a>
+      <a href="/notes/{{ .Data.Plural }}/" class="site-section">{{ .Data.Plural | title }}</a>
       {{- else if .Section }}
       <span class="breadcrumb-sep">//</span>
       <a href="/{{ .Section }}/" class="site-section">{{ .Section | title }}</a>

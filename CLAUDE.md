@@ -17,7 +17,7 @@ content/           # Markdown content
 ├── cv/            # CV section
 │   ├── _index.md  # Summary
 │   └── experience/# Work history (1 file per job)
-└── blog/          # Blog posts
+└── notes/         # Notes
 
 data/              # YAML structured data
 ├── meta.yaml      # Contact info
@@ -32,10 +32,10 @@ static/            # Static files (favicon, CNAME)
 
 ## Adding Content
 
-### Blog Post
+### Note
 
 ```bash
-hugo new blog/my-post.md
+hugo new notes/my-note.md
 ```
 
 ### Work Experience

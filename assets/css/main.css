@@ -821,8 +821,8 @@ a:hover::after {
   font-size: 0.95rem;
 }
 
-/* Blog list */
-.blog-card {
+/* Notes list */
+.note-card {
   display: block;
   background: var(--color-surface);
   border: var(--border-width) solid var(--color-border);
@@ -832,38 +832,38 @@ a:hover::after {
   transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
-.blog-card::after {
+.note-card::after {
   display: none;
 }
 
-.blog-card:hover {
+.note-card:hover {
   transform: translate(3px, 3px);
   box-shadow: 3px 3px 0 var(--color-shadow);
   background: var(--color-accent);
 }
 
-.blog-card:hover .dates,
-.blog-card:hover .blog-summary,
-.blog-card:hover .blog-card-tag:not(.blog-card-category) {
+.note-card:hover .dates,
+.note-card:hover .note-summary,
+.note-card:hover .note-card-tag:not(.note-card-category) {
   color: #1a1a1a;
   border-color: #1a1a1a;
 }
 
-.blog-card h2 {
+.note-card h2 {
   margin-bottom: 0.25rem;
 }
 
-.blog-card .dates {
+.note-card .dates {
   margin-bottom: 0.5rem;
 }
 
-.blog-summary {
+.note-summary {
   color: var(--color-text-muted);
   font-size: 0.95rem;
   margin: 0;
 }
 
-.blog-card-tags {
+.note-card-tags {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -871,7 +871,7 @@ a:hover::after {
   margin-top: 0.75rem;
 }
 
-.blog-card-tag {
+.note-card-tag {
   font-family: var(--font-heading);
   font-size: 0.6rem;
   font-weight: 500;
@@ -883,59 +883,59 @@ a:hover::after {
   color: var(--color-text);
 }
 
-.blog-card-category {
+.note-card-category {
   background: var(--color-bg);
 }
 
-/* Blog single post */
-.blog-content {
+/* Notes single post */
+.note-content {
   padding: 1.5rem 2rem 2rem 2rem;
   font-size: 1rem;
   line-height: 1.75;
 }
 
-.blog-content > *:first-child {
+.note-content > *:first-child {
   margin-top: 0;
 }
 
-.blog-content p {
+.note-content p {
   margin: 1.25rem 0;
 }
 
-.blog-content h2 {
+.note-content h2 {
   font-size: 1.35rem;
   margin: 2.5rem 0 1rem 0;
   padding-bottom: 0.35rem;
   border-bottom: 3px solid var(--color-border);
 }
 
-.blog-content h3 {
+.note-content h3 {
   font-size: 1.1rem;
   margin: 2rem 0 0.75rem 0;
 }
 
-.blog-content ul, .blog-content ol {
+.note-content ul, .note-content ol {
   margin: 1rem 0 1rem 1.5rem;
 }
 
-.blog-content li {
+.note-content li {
   margin-bottom: 0.5rem;
 }
 
-.blog-content hr {
+.note-content hr {
   border: none;
   border-top: 2px solid var(--color-border);
   margin: 2rem 0;
 }
 
-.blog-content code {
+.note-content code {
   background: #f0f0eb;
   padding: 0.15rem 0.4rem;
   font-size: 0.9em;
   border: 1px solid #ddd;
 }
 
-.blog-content pre,
+.note-content pre,
 .highlight pre {
   background: #1a1a1a;
   padding: 1.25rem;
@@ -945,14 +945,14 @@ a:hover::after {
   box-shadow: 4px 4px 0 var(--color-shadow);
 }
 
-.blog-content pre code,
+.note-content pre code,
 .highlight pre code {
   background: none !important;
   border: none;
   padding: 0;
 }
 
-.blog-content blockquote {
+.note-content blockquote {
   border-left: 4px solid var(--color-border);
   margin: 1.5rem 0;
   padding: 0.5rem 0 0.5rem 1.5rem;
