@@ -782,6 +782,11 @@ a:hover::after {
   gap: 1.5rem;
 }
 
+.home-nav--single {
+  grid-template-columns: minmax(0, 28rem);
+  justify-content: center;
+}
+
 @media (max-width: 600px) {
   .home-nav {
     grid-template-columns: 1fr;
