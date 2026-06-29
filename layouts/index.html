@@ -1,11 +1,11 @@
 {{ define "main" }}
 <div class="header-card">
-  <h1>{{ .Site.Data.meta.name }}</h1>
-  <p class="header-location">{{ .Site.Data.meta.location }}</p>
+  <h1>{{ hugo.Data.meta.name }}</h1>
+  <p class="header-location">{{ hugo.Data.meta.location }}</p>
   <div class="contact-links">
-    <a href="mailto:{{ .Site.Data.meta.email }}" class="contact-btn">{{ .Site.Data.meta.email }}</a>
-    <a href="{{ .Site.Data.meta.linkedin_url }}" target="_blank" class="contact-btn">LinkedIn</a>
-    <a href="{{ .Site.Data.meta.github_url }}" target="_blank" class="contact-btn">GitHub</a>
+    <a href="mailto:{{ hugo.Data.meta.email }}" class="contact-btn">{{ hugo.Data.meta.email }}</a>
+    <a href="{{ hugo.Data.meta.linkedin_url }}" target="_blank" class="contact-btn">LinkedIn</a>
+    <a href="{{ hugo.Data.meta.github_url }}" target="_blank" class="contact-btn">GitHub</a>
   </div>
 </div>
 

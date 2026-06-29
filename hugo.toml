@@ -1,5 +1,5 @@
 baseURL = 'https://scott.ames.sh/'
-languageCode = 'en-us'
+locale = 'en-US'
 title = 'Scott Ames'
 
 [taxonomies]
