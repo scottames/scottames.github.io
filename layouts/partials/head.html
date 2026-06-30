@@ -1,6 +1,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+<title>{{ .Site.Title }}{{ if and .Title (not .IsHome) }} | {{ .Title }}{{ end }}</title>
 <script>
   (function() {
     var theme = localStorage.getItem('theme');
@@ -10,7 +10,12 @@
   })();
 </script>
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" sizes="any">
+{{- with resources.Get "favicon.png" }}
+<link rel="icon" type="image/png" sizes="32x32" href="{{ (.Resize "32x32 png").RelPermalink }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ (.Resize "16x16 png").RelPermalink }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ (.Resize "180x180 png").RelPermalink }}">
+{{- end }}
 <link rel="canonical" href="{{ .Permalink }}">
 
 <!-- Open Graph -->
@@ -31,7 +36,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 {{ $css := resources.Get "css/main.css" }}
-<link rel="stylesheet" href="{{ $css.Permalink }}">
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7MVZPP2Y3K"></script>
 <script>

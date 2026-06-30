@@ -137,6 +137,7 @@ a:hover::after {
   font-family: var(--font-heading);
   font-size: 1.25rem;
   font-weight: 300;
+  line-height: 1;
 }
 
 .header-location {
@@ -432,12 +433,35 @@ a:hover::after {
   font-family: var(--font-heading);
   font-size: 1.5rem;
   font-weight: 700;
+  line-height: 1;
   text-transform: uppercase;
 }
 
 .site-title::after,
 .site-section::after {
   height: 3px;
+}
+
+/* Brush-stroke logo mark (home link) */
+.site-logo {
+  display: flex;
+  align-items: center;
+}
+
+.site-logo-img {
+  display: block;
+  height: 1.5rem;
+  width: auto;
+}
+
+[data-theme="dark"] .site-logo-img {
+  filter: invert(1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .site-logo-img {
+    filter: invert(1);
+  }
 }
 
 .site-nav a {

@@ -1,7 +1,11 @@
 <header class="site-header">
   <div class="header-content">
     <div class="site-breadcrumb">
-      <a href="/" class="site-title">{{ .Site.Title }}</a>
+      <a href="/" class="site-logo">
+        {{- with resources.Get "logo.png" }}
+        <img src="{{ (.Resize "x56 webp").RelPermalink }}" alt="{{ $.Site.Title }} — home" class="site-logo-img">
+        {{- end }}
+      </a>
       {{- if or (eq .Kind "taxonomy") (eq .Kind "term") }}
       <span class="breadcrumb-sep">//</span>
       <a href="/notes/" class="site-section">Notes</a>
